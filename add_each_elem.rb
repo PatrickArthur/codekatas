@@ -3,12 +3,12 @@
 
 
 def sumarr(list)
-  list.sort
+  list2=list.sort
   total = 0
   i=0
-  while i<list.length
-    len=list.length-i
-    list[0..len].each do |x|
+  while i<list2.length
+    len=list2.length-i
+    list2[0..len].each do |x|
       total+=x
       total2=total-x
       puts "#{x} plus #{total2} equals #{total}"
