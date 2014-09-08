@@ -9,6 +9,8 @@ def vals
   @hash.each do |k,v|
     if v > 1
       puts "#{k} has #{v} dups"
+    else
+      puts "#{k} has no dups"
     end
     if v == @hash.values.max
       puts "the mode is #{k}"
