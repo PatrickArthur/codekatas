@@ -13,6 +13,7 @@ def powerset(set)
   @test = subset | subset.map { |x| x | [p] }
 end
 
+
 def checknum(num)
   sum=0
   list=[]
@@ -21,15 +22,15 @@ def checknum(num)
       sum+=y
       list<<y
     end
-    if sum == num
-      puts "The sum of #{list.to_s} is #{sum} equal to #{num}"
-    else
-      puts "The sum of #{list.to_s} is #{sum} not equal to #{num}"
+    num.each do |z|
+      if sum == z
+        puts "The sum of #{list.to_s} is #{sum} equal to #{z}"
+      end
     end
     sum=0
     list=[]
   end
 end
 
-powerset([1,2,3,4])
-checknum(6)
+powerset([1,2,3,4,5])
+checknum([4,5,6])
