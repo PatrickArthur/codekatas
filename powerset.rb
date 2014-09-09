@@ -1,9 +1,10 @@
 #### Ruby program that demonstrates the usage of
-#### powersets. Program takes a number and an array of
-#### numbers and creates a multidimentional array of
-#### all possible combinations of it. It then compares
-#### the number num to see if any combination of
-#### numbers in the array add up to it.
+#### powersets. Program takes an array of numbers(num) and
+#### creates a multidimentional array from an array called set for
+###  a comparison array of
+#### all possible combinations of integers. It then iterates through
+#### the array of numbers you want to check and see if any combination of
+#### numbers in set add up to it.
 
 
 def powerset(set)
