@@ -7,6 +7,28 @@
 #### numbers in set add up to it.
 
 
+
+def numlist
+  @num = []
+  puts 'Enter numbers you want to see all combinations of sum, type done when finished'
+  input = gets.chomp
+  while input != "done"
+    @num << input.to_i
+    input=gets.chomp
+  end
+end
+
+
+def checklist
+  @check = []
+  puts 'Enter numbers you want to see combinations of, type done when finished'
+  input = gets.chomp
+  while input != "done"
+    @check << input.to_i
+    input = gets.chomp
+  end
+end
+
 def powerset(set)
   return [set] if set.empty?
   p = set.pop
@@ -15,23 +37,25 @@ def powerset(set)
 end
 
 
-def checknum(num)
-  sum=0
+def checknum
   list=[]
+  sum=0
   @test.each do |x|
     x.each do |y|
       sum+=y
       list<<y
     end
-    num.each do |z|
+    @num.each do |z|
       if sum == z
         puts "The sum of #{list.to_s} is #{sum} equal to #{z}"
       end
     end
-    sum=0
     list=[]
+    sum=0
   end
 end
 
-powerset([1,2,3,4,5])
-checknum([4,5,6])
+numlist
+checklist
+powerset(@check)
+checknum
