@@ -9,14 +9,12 @@
 
 
 def numlist
-  @num = []
   puts 'Enter numbers you want to see all combinations of sum, type done when finished'
   input = gets.chomp
-  while input != "done"
-    @num << input.to_i
-    input=gets.chomp
-  end
+  @num = input.to_i
 end
+
+
 
 
 def checklist
@@ -40,20 +38,23 @@ end
 def checknum
   list=[]
   sum=0
+  hash=Hash.new(0)
+  i=0
   @test.each do |x|
     x.each do |y|
       sum+=y
       list<<y
-    end
-    @num.each do |z|
-      if sum == z
-        puts "The sum of #{list.to_s} is #{sum} equal to #{z}"
+      if sum == @num
+        i+=1
+        hash[i]=list.to_s
+        puts hash
       end
     end
     list=[]
     sum=0
   end
 end
+
 
 numlist
 checklist
