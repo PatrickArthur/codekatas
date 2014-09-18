@@ -15,7 +15,8 @@ class Node
 end
 
 z = Node.new("z")
-b = Node.new("b", [z])
+d = Node.new("d", [f] )
+b = Node.new("b", [d,z])
 c = Node.new("c")
 parent = Node.new("a", [b, c])
 
