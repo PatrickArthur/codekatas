@@ -5,6 +5,15 @@ def arrmode(list)
   end
 end
 
+def getavg(list)
+  sum=0
+  @avg=0
+  list.each do |x|
+    sum+=x
+    @avg=(sum/list.length)
+  end
+end
+
 def vals
   @hash.each do |k,v|
     if v > 1
@@ -16,8 +25,11 @@ def vals
       puts "the mode is #{k}"
     end
   end
+  puts "the average is #{@avg}"
 end
 
+array = [1,1,2,3,4]
 
-arrmode([1,2,2,3,3,3,4,5,5,5,5,5,6,6,7,7,7,7,7,7,7,7,10])
+arrmode(array)
+getavg(array)
 vals

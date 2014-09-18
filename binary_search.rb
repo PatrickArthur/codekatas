@@ -15,6 +15,5 @@ def search(array,val)
   puts mid
 end
 
-
-search([1,2,3,7,4,5,6,8,9],7)
+search([1,2,3,4,5,6,8,9],8)
 
