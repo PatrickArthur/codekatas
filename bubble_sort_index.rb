@@ -1,4 +1,5 @@
-def bubble_sort(array)
+def bubble_sort(string)
+  array=string.split("")
   array.each_index do |first|
     array.each_index do |second|
       if array[first] < array[second]
@@ -6,6 +7,7 @@ def bubble_sort(array)
       end
     end
   end
+  puts array
 end
 
-bubble_sort([2,1,5,3])
+bubble_sort("hello")
