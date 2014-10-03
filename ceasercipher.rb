@@ -5,7 +5,11 @@ def ceasercipher(string,num)
   @h = {}
   v = 0
   ('A'..'Z').each do |c|
-    v+=1
+    if c == 'A'
+      v = 0
+    else
+      v+=1
+    end
     @h[c] = v
   end
 end
@@ -13,12 +17,12 @@ end
 def checkvals
   @array.each do |x|
     @h.each do |k,v|
-      if x == k && v+@number <= 26
+      if x == k && v+@number <= 25
         position=v+@number
-        @array2 << @h.keys[position-1]
+        @array2 << @h.keys[position]
       elsif x == k && v+@number > 26
         position2=(v+@number)-26
-        @array2 << @h.keys[position2-1]
+        @array2 << @h.keys[position2]
       end
     end
   end
@@ -30,3 +34,4 @@ checkvals
 
 ceasercipher("HI",20)
 checkvals
+
