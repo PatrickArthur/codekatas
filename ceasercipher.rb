@@ -1,5 +1,6 @@
-def ceasercipher(string,num)
-  @number=num
+def ceasercipher(string)
+  @number=Random.rand(1..26)
+  puts @number
   @array=string.split("")
   @array2=[]
   @h = {}
@@ -20,7 +21,7 @@ def checkvals
       if x == k && v+@number <= 25
         position=v+@number
         @array2 << @h.keys[position]
-      elsif x == k && v+@number > 26
+      elsif x == k && v+@number >=26
         position2=(v+@number)-26
         @array2 << @h.keys[position2]
       end
@@ -29,9 +30,7 @@ def checkvals
   puts @array2.join("")
 end
 
-ceasercipher("HI",2)
+ceasercipher("HI")
 checkvals
 
-ceasercipher("HI",20)
-checkvals
 
