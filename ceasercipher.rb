@@ -1,5 +1,5 @@
 def ceasercipher(string)
-  @number=Random.rand(1..26)
+  @number=Random.rand(1..25)
   puts @number
   @array=string.split("")
   @array2=[]
