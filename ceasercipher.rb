@@ -11,8 +11,8 @@ def ceasercipher(string,num)
 end
 
 def checkvals
-  @h.each do |k,v|
-    @array.each do |x|
+  @array.each do |x|
+    @h.each do |k,v|
       if x == k && v+@number <= 26
         position=v+@number
         @array2 << @h.keys[position-1]

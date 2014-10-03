@@ -1,5 +1,5 @@
 def combinations
-  coins = [1, 5, 7, 9, 11]
+  coins = [0.25, 0.10, 0.05, 0.01]
   all_coins = []
   for i in 1..coins.length()
     all_coins << coins.combination(i).to_a
@@ -16,14 +16,14 @@ def coincount(num)
     arr.each do |x|
       sum += x
     end
-    if sum == num
-      length_array << arr.length
-    end
+    puts sum
+    # if sum == num
+    #   length_array << arr.length
+    # end
   end
-  return "There are #{length_array.min} coins that add to #{num} "
+  # return "There are #{length_array.min} coins that add to #{num} "
 end
 
 
-puts coincount(16)
-puts coincount(25)
-puts coincount(6)
+puts coincount(0.97)
+
