@@ -17,6 +17,9 @@ end
 
 def checkvals
   @array.each do |x|
+    if x.empty?
+        puts "Yes"
+      end
     @h.each do |k,v|
       if x == k && v+@number <= 25
         position=v+@number

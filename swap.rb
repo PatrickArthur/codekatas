@@ -1,13 +1,13 @@
 
-def fac(num)
-  i = 1
-  while i<num
-    num * (num-i)
-    i+=1
-  end
+
+
+def coincheck(num)
+  step1 = num/0.25
+  puts step1
 end
 
-fac(4)
+coincheck(0.97)
+
 
 
 
